@@ -1,13 +1,17 @@
 package main
 
 import (
-	"fmt"
+	"log"
+	"os"
 )
 
 func main() {
-    helloWorld()  // call function
-}
-
-func helloWorld() {                  // declare the function
-    fmt.Println("Hello World!")  // prints "Hello World!"
+	if len(os.Args) == 1 {
+		log.Fatal("Please pass a text to encode.")
+	}
+	// asuming there's no way to pass less than 1 os.Args.
+	//text := os.Args[1]
+	//if (err != nil) {
+	//	log.Fatal(err)
+	//}
 }
